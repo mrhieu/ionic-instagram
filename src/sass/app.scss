@@ -1,0 +1,62 @@
+.text-sm {
+  font-size: 13px;
+}
+
+.text-muted {
+  color: var(--ion-color-medium);
+}
+
+.bg-image {
+  height: 120px;
+  background-color: var(--ion-color-medium);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-muted {
+  --background: var(--ion-color-light);
+}
+
+ion-avatar {
+  &.has-status {
+    position: relative;
+  }
+
+  &.has-update {
+    padding: 2px;
+    border: 2px solid var(--ion-color-danger);
+  }
+
+  &.avatar-xs {
+    width: 24px;
+    height: 24px;
+  }
+
+  &.avatar-sm {
+    width: 30px;
+    height: 30px;
+  }
+
+  &.avatar-md {
+    width: 56px;
+    height: 56px;
+  }
+
+  &.avatar-lg {
+    display: inline-block;
+    width: 88px;
+    height: 88px;
+  }
+
+  .avatar-status {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .online-status {
+    width: 16px;
+    height: 16px;
+    border: 3px solid #fff;
+  }
+}

@@ -1,17 +1,125 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="camera-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Instagram</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="send-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="story-list">
+    <div class="scroll-horizontal">
+      <div class="scroll-item">
+        <ion-avatar class="avatar-md has-status">
+          <img src="assets/img/avatars/7.jpg" alt="">
+        </ion-avatar>
+        <div class="item-label text-muted">
+          Your story
+        </div>
+      </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+      <div class="scroll-item" *ngFor="let i of [1,2,3,4,5,6,7,8,9]">
+        <div class="item-avatar">
+          <ion-avatar class="avatar-md has-update has-status">
+            <img src="assets/img/avatars/{{i}}.jpg" alt="">
+          </ion-avatar>
+        </div>
+        <div class="item-label">
+          Tony
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-list">
+    <div class="post-item" *ngFor="let i of [1,2,3,4,5]" routerLink="/comments">
+      <div class="post-header">
+        <ion-row class="ion-justify-content-center ion-align-items-center">
+          <ion-col size="auto">
+            <ion-avatar class="avatar-sm">
+              <img src="assets/img/avatars/{{i}}.jpg" alt="">
+            </ion-avatar>
+          </ion-col>
+          <ion-col>
+            <strong>Spiderman</strong>
+          </ion-col>
+          <ion-col size="auto">
+            <ion-icon name="ellipsis-horizontal"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="post-media">
+        <img src="assets/img/img_{{i % 4 + 1}}.png" alt="">
+      </div>
+      <div class="post-actions">
+        <ion-row>
+          <ion-col>
+            <ion-button size="small" fill="clear" color="dark">
+              <ion-icon slot="icon-only" name="heart-outline"></ion-icon>
+            </ion-button>
+            <ion-button size="small" fill="clear" color="dark">
+              <ion-icon slot="icon-only" name="chatbubble-outline"></ion-icon>
+            </ion-button>
+            <ion-button size="small" fill="clear" color="dark">
+              <ion-icon slot="icon-only" name="send-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+          <ion-col size="auto">
+            <ion-button size="small" fill="clear" color="dark">
+              <ion-icon slot="icon-only" name="bookmark-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="post-stats">
+        <strong>20 likes</strong>
+      </div>
+
+      <div class="post-comments">
+        <div class="comment-item">
+          <span class="username">spiderman</span>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="" class="hash-tag">#labore</a> <a href="" class="hash-tag">#dolore</a> <a href="" class="hash-tag">#magna</a> <a href="" class="hash-tag">#aliqua</a>
+        </div>
+
+        <div class="comment-expander text-muted">View all 35 comments</div>
+
+        <div class="comment-item">
+          <span class="username">steveroger</span>
+          Ipsum dolor sit amet, consectetur?
+
+          <div class="comment-item reply">
+            <span class="username">spiderman</span>
+            Lorem ipsum hehe
+          </div>
+        </div>
+
+        <ion-row class="ion-justify-content-center ion-align-items-center">
+          <ion-col size="auto">
+            <ion-avatar class="avatar-sm">
+              <img src="assets/img/avatars/7.jpg" alt="">
+            </ion-avatar>
+          </ion-col>
+          <ion-col>
+            <div class="text-muted">Add a comment...</div>
+          </ion-col>
+          <ion-col size="auto">
+            😁😂
+            <ion-icon name="add-circle-outline"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+
 </ion-content>

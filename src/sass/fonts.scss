@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root, :root[mode="md"], :root[mode="ios"] {
+  --ion-font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', sans-serif !important;
+  font-family: var(--ion-font-family) !important;
+}

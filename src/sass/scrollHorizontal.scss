@@ -1,0 +1,13 @@
+.scroll-horizontal {
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  .scroll-item {
+    position: relative;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+}

@@ -1,0 +1,44 @@
+.comment-item {
+  padding: 8px;
+  border-bottom: 1px solid var(--ion-color-light);
+  line-height: 1.4;
+
+  &.reply {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .username {
+    font-weight: 700;
+    margin-right: 4px;
+  }
+
+  .comment-actions {
+    font-size: 13px;
+    color: var(--ion-color-medium);
+    margin-top: 8px;
+
+    .action-item {
+      margin-right: 16px;
+    }
+  }
+
+  .hash-tag {
+    text-decoration: none;
+    margin-right: 4px;
+  }
+
+  .replies {
+    padding-left: 40px;
+  }
+}
+
+ion-toolbar {
+  ion-avatar {
+    margin-top: 10px;
+  }
+
+  ion-searchbar {
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button color="dark" defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Comments</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="send-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="comments-list">
+    <div class="comment-item" *ngFor="let i of [1,2,3,4]">
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="auto">
+          <ion-avatar class="avatar-sm">
+            <img src="assets/img/avatars/{{i}}.jpg" alt="">
+          </ion-avatar>
+        </ion-col>
+        <ion-col>
+          <div>
+            <span class="username">spiderman</span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="" class="hash-tag">#labore</a> <a href="" class="hash-tag">#dolore</a> <a href="" class="hash-tag">#magna</a> <a href="" class="hash-tag">#aliqua</a>
+          </div>
+          <div class="comment-actions">
+            <span class="action-item">1h</span>
+            <span class="action-item"><strong>3 likes</strong></span>
+            <span class="action-item"><strong>Reply</strong></span>
+          </div>
+        </ion-col>
+        <ion-col size="auto">
+          <ion-icon name="heart-outline"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+      <div class="replies">
+        <div class="comment-item reply">
+          <ion-row class="ion-justify-content-center">
+            <ion-col size="auto">
+              <ion-avatar class="avatar-xs">
+                <img src="assets/img/avatars/{{i + 2}}.jpg" alt="">
+              </ion-avatar>
+            </ion-col>
+            <ion-col>
+              <div>
+                <span class="username">hawkeye</span>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="" class="hash-tag">#labore</a> <a href="" class="hash-tag">#dolore</a> <a href="" class="hash-tag">#magna</a> <a href="" class="hash-tag">#aliqua</a>
+              </div>
+              <div class="comment-actions">
+                <span class="action-item">1h</span>
+              </div>
+            </ion-col>
+            <ion-col size="auto">
+              <ion-icon name="heart-outline"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <div class="comment-item reply">
+          <ion-row class="ion-justify-content-center ion-align-items-center">
+            <ion-col size="auto">
+              <ion-avatar class="avatar-xs">
+                <img src="assets/img/avatars/7.jpg" alt="">
+              </ion-avatar>
+            </ion-col>
+            <ion-col>
+              <div class="text-muted text-sm">Reply to <strong>spiderman</strong>...</div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-avatar class="avatar-sm" slot="start">
+        <img src="assets/img/avatars/7.jpg" alt="">
+      </ion-avatar>
+    </ion-buttons>
+
+    <ion-searchbar placeholder="Add a comment..."></ion-searchbar>
+  </ion-toolbar>
+</ion-footer>

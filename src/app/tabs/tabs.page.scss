@@ -1,1 +1,21 @@
+ion-tab-bar {
+  --background: var(--ion-color-light);
+}
 
+ion-tab-button {
+  --color-selected: var(--ion-color-dark);
+}
+
+.icon-active {
+  display: none;
+}
+
+.tab-selected {
+  .icon-inactive {
+    display: none;
+  }
+
+  .icon-active {
+    display: block;
+  }
+}
