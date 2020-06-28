@@ -1,0 +1,20 @@
+.list-header-custom {
+  font-size: 17px;
+}
+
+.activity-group {
+  border-bottom: 1px solid var(--ion-color-light);
+
+  .activity-item {
+    padding: 8px;
+  }
+
+  .activity-actions {
+    margin-top: 8px;
+
+    ion-icon {
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+  }
+}

@@ -1,17 +1,42 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-searchbar placeholder="Search"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="scan-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <div class="categories scroll-horizontal">
+      <div class="scroll-item">
+        <ion-button fill="outline" color="dark" size="small">
+          <ion-icon name="earth"></ion-icon>
+        	IGTV
+        </ion-button>
+      </div>
+      <div class="scroll-item">
+        <ion-button fill="outline" color="dark" size="small">
+          <ion-icon name="cart"></ion-icon>
+        	Shop
+        </ion-button>
+      </div>
+      <div class="scroll-item" *ngFor="let item of ['Dog', 'Architecture', 'Fashion', 'Watch']">
+        <ion-button fill="outline" color="dark" size="small">
+        	{{item}}
+        </ion-button>
+      </div>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-content>
+  <div class="collection-grid" *ngFor="let group of groups">
+    <div
+      *ngFor="let item of group.items"
+      class="collection-item bg-image"
+      [class.large]="item.isFeatured"
+      [style.backgroundImage]="'url(assets/img/img_' + (item.id%4 + 1) + '.png)'">
+    </div>
+  </div>
 </ion-content>

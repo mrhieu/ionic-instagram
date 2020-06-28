@@ -1,0 +1,38 @@
+.profile-header {
+  padding: 8px;
+}
+
+.profile-stats {
+  text-align: center;
+
+  .stats-number {
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  .stats-label {
+    font-size: 13px;
+  }
+}
+
+.hash-tag {
+  text-decoration: none;
+  margin-right: 4px;
+}
+
+.profile-info {
+  line-height: 1.5;
+  padding-bottom: 0;
+}
+
+.post-grid {
+  ion-row {
+    --ion-grid-column-padding: 1px;
+  }
+
+  .post-item {
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+  }
+}

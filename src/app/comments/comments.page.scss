@@ -33,12 +33,13 @@
   }
 }
 
-ion-toolbar {
-  ion-avatar {
-    margin-top: 10px;
-  }
+ion-toolbar ion-avatar {
+  margin-right: 8px;
+}
 
-  ion-searchbar {
-    padding-bottom: 0;
-  }
+ion-input {
+  --background: var(--ion-color-light);
+  --padding-start: 12px;
+  --padding-end: 12px;
+  border-radius: 20px;
 }

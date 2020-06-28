@@ -4,8 +4,7 @@
 
 [Demo](https://mrhieu.github.io/ionic-instagram/)
 
-![Simulator Screen Shot - iPhone SE (2nd generation) - 2020-06-21 at 18 50 49](<PROJECT_SCREENSHOT>)
-
+![thumb_320](https://user-images.githubusercontent.com/1593560/85943704-53adf900-b964-11ea-81e7-9dff9cb7b32c.png)
 
 
 ## Setup
@@ -40,7 +39,7 @@ $ ionic serve
 - A basic template that contains about 5 screens (for themes) or a feature demo (for plugins, services)
 
 
-### What are the differences from your paid products?
+### What are the differences in your paid products?
 - (Many) more screens
 - More detailed and pixel-perfect in terms of colors, typography, spacing, sizing, animation effects,...
 - Better organized in components and services, highly reusable

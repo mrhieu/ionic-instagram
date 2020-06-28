@@ -1,9 +1,73 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>tab5</ion-title>
+<ion-header class="ion-no-border">
+  <ion-toolbar color="light">
+    <ion-title>mrhieu</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="light">
+  <ion-row class="profile-header ion-align-items-center">
+    <ion-col size="auto">
+      <ion-avatar class="avatar-lg has-update has-status">
+        <img src="assets/img/avatars/7.jpg" alt="">
+      </ion-avatar>
+    </ion-col>
+    <ion-col>
+      <ion-row class="profile-stats">
+        <ion-col>
+          <div class="stats-number">1,329</div>
+          <div class="stats-label">Posts</div>
+        </ion-col>
+        <ion-col>
+          <div class="stats-number">9,329</div>
+          <div class="stats-label">Followers</div>
+        </ion-col>
+        <ion-col>
+          <div class="stats-number">5,329</div>
+          <div class="stats-label">Following</div>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
 
+  <div class="ion-padding profile-info">
+    <strong>Hieu Pham</strong>
+    <div>
+      Working on Project <a href="https://www.takethatdesign.com/100ions/" target="_blank" rel="noreferrer noopener" class="hash-tag"><strong>#100ions</strong></a>
+    </div>
+    <div>
+      Homepage: <a href="https://www.takethatdesign.com" target="_blank" rel="noreferrer noopener" class="hash-tag"><strong>www.takethatdesign.com</strong></a>
+    </div>
+  </div>
+
+  <div class="ion-padding">
+    <ion-button expand="block" fill="outline" color="dark" size="small">
+      Edit Profile
+    </ion-button>
+  </div>
+
+  <ion-segment value="active">
+    <ion-segment-button value="active">
+      <ion-icon name="grid-outline"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button>
+      <ion-icon name="earth-outline"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button>
+      <ion-icon name="people-circle-outline"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="post-grid">
+    <ion-row>
+      <ion-col size="4" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]">
+        <div class="post-item bg-image" [style.backgroundImage]="'url(assets/img/img_' + (i % 4 + 1) + '.png)'"></div>
+      </ion-col>
+    </ion-row>
+  </div>
 </ion-content>
